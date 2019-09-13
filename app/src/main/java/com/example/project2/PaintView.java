@@ -1,13 +1,13 @@
 package com.example.project2;
 
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 
 public class PaintView extends View {
     public LayoutParams params;
@@ -49,7 +49,7 @@ public class PaintView extends View {
         canvas.drawPath(path, brush);
     }
 
-
+    //eraser
     public void clearCanvas() {
 
     }

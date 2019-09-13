@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="your_color">#FFFFFF</color>
+    <!-- Title Bar -->
+    <color name = "colorPrimary" >#3F0E79</color>
+    <!-- Status Bar -->
+    <color name = "colorPrimaryDark">#4C1788</color>
+    <!-- Button colors. -->
+    <color name = "colorAccent">#540C8D</color>
+
 </resources>
