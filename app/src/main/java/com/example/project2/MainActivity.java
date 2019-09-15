@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        paintView = (PaintView) findViewById(R.id.button);
+        paintView = (PaintView) findViewById(R.id.canvas);
     }
 
     public void clearCanvas(View v) {

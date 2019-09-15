@@ -13,6 +13,7 @@
     tools:context=".MainActivity" >
 
     <com.radefffactory.pain.CanvasView
+        android:id="@+id/canvas"
         android:layout_above="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,5 +31,6 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="55dp"
+        android:layout_centerHorizontal="true"
         android:text="CLEAR CANVAS" />
 </RelativeLayout>
