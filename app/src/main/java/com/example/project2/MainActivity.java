@@ -2,6 +2,8 @@ package com.example.project2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,10 +14,11 @@ import android.view.MenuItem;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    PaintPotView v_drawingPad;
     Button b_red, b_blue, b_green;
     Button b_reset, b_dotSizePlus, b_dotSizeMinus;
     TextView tv_dotSize;
+
     private static final int DOT_SIZE_INCREMENT = 5;
 
     @Override
@@ -37,8 +40,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b_reset.setOnClickListener(this);
         b_dotSizePlus.setOnClickListener(this);
         b_dotSizeMinus.setOnClickListener(this);
+        v_drawingPad = (PaintPotView)findViewById(R.id.drawingPad_v);
 
         tv_dotSize = (TextView)findViewById(R.id.dotSize_tv);
+        tv_dotSize.setText("DOT SIZE =" + v_drawingPad.getDotSize());
+
     }
 
 
@@ -48,21 +54,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (view.getId()) {
             case R.id.red_b:
+                v_drawingPad.setPenColor(Color.RED);
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
             case R.id.blue_b:
+                v_drawingPad.setPenColor(Color.BLUE);
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
             case R.id.green_b:
+                v_drawingPad.setPenColor(Color.GREEN);
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
             case R.id.reset_b:
+                v_drawingPad.reset();
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
             case R.id.plus_b:
+                v_drawingPad.changeDotSize(+DOT_SIZE_INCREMENT);
+                tv_dotSize.setText("DOT SIZE = " + v_drawingPad.getDotSize());
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
             case R.id.minus_b:
+                v_drawingPad.changeDotSize(-DOT_SIZE_INCREMENT);
+                tv_dotSize.setText("DOT SIZE = " + v_drawingPad.getDotSize());
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
         }

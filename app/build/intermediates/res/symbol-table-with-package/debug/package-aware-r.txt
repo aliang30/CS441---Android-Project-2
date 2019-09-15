@@ -702,6 +702,7 @@ id dimensions
 id direct
 id disableHome
 id dotSize_tv
+id drawingPad_v
 id edit_query
 id end
 id expand_activities_button
