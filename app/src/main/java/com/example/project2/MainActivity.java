@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+
         Button _b = (Button)findViewById(view.getId());
 
         switch (view.getId()) {
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.reset_b:
                 v_drawingPad.reset();
+                tv_dotSize.setText("DOT SIZE =" + v_drawingPad.getDotSize());
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
             case R.id.plus_b:
