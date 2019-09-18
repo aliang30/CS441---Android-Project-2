@@ -679,6 +679,7 @@ id always
 id async
 id barrier
 id beginning
+id black_b
 id blocking
 id blue_b
 id bottom
@@ -739,13 +740,16 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id orange_b
 id packed
 id parent
 id parentPanel
 id percent
+id pink_b
 id plus_b
 id progress_circular
 id progress_horizontal
+id purple_b
 id radio
 id red_b
 id reset_b
@@ -802,6 +806,7 @@ id useLogo
 id withText
 id wrap
 id wrap_content
+id yellow_b
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer cancel_button_image_alpha

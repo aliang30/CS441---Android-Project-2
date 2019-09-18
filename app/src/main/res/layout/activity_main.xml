@@ -38,11 +38,61 @@
         android:text="GREEN" />
 
     <Button
+    android:id="@+id/orange_b"
+    android:layout_width="72dp"
+    android:layout_height="33dp"
+    android:layout_marginLeft="170dp"
+    android:layout_marginTop="60dp"
+    android:background="#FC9416"
+    android:textColor="@android:color/white"
+    android:text="ORANGE" />
+
+    <Button
+        android:id="@+id/purple_b"
+        android:layout_width="65dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="60dp"
+        android:background="#6611B3"
+        android:textColor="@android:color/white"
+        android:text="PURPLE" />
+
+    <Button
+        android:id="@+id/yellow_b"
+        android:layout_width="65dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:background="#FFE269"
+        android:textColor="@android:color/white"
+        android:text="YELLOW" />
+
+    <Button
+        android:id="@+id/pink_b"
+        android:layout_width="65dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="22dp"
+        android:background="#EB62D8"
+        android:textColor="@android:color/white"
+        android:text="PINK" />
+
+    <Button
+        android:id="@+id/black_b"
+        android:layout_width="65dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="60dp"
+        android:background="#000000"
+        android:textColor="@android:color/white"
+        android:text="BLACK" />
+
+    <Button
         android:id="@+id/reset_b"
         android:layout_width="72dp"
         android:layout_height="33dp"
-        android:layout_marginLeft="260dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="390dp"
         android:background="#FFFFFF"
         android:textColor="#000000"
         android:text="RESET" />
