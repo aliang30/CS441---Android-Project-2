@@ -15,7 +15,7 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     PaintPotView v_drawingPad;
-    Button b_red, b_blue, b_green;
+    Button b_red, b_blue, b_green, b_cyan, b_yellow, b_black, b_white, b_magenta;
     Button b_reset, b_dotSizePlus, b_dotSizeMinus;
     TextView tv_dotSize;
 
@@ -30,6 +30,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b_red = (Button)findViewById(R.id.red_b);
         b_blue = (Button)findViewById(R.id.blue_b);
         b_green = (Button)findViewById(R.id.green_b);
+        b_yellow = (Button)findViewById(R.id.yellow_b);
+        b_magenta = (Button)findViewById(R.id.magenta_b);
+        b_black = (Button)findViewById(R.id.black_b);
+        b_white = (Button)findViewById(R.id.white_b);
+        b_cyan = (Button)findViewById(R.id.cyan_b);
         b_reset = (Button)findViewById(R.id.reset_b);
         b_dotSizePlus = (Button)findViewById(R.id.plus_b);
         b_dotSizeMinus = (Button)findViewById(R.id.minus_b);
@@ -37,13 +42,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b_red.setOnClickListener(this);
         b_blue.setOnClickListener(this);
         b_green.setOnClickListener(this);
+        b_yellow.setOnClickListener(this);
+        b_magenta.setOnClickListener(this);
+        b_black.setOnClickListener(this);
+        b_white.setOnClickListener(this);
+        b_cyan.setOnClickListener(this);
         b_reset.setOnClickListener(this);
         b_dotSizePlus.setOnClickListener(this);
         b_dotSizeMinus.setOnClickListener(this);
         v_drawingPad = (PaintPotView)findViewById(R.id.drawingPad_v);
 
         tv_dotSize = (TextView)findViewById(R.id.dotSize_tv);
-        tv_dotSize.setText("DOT SIZE =" + v_drawingPad.getDotSize());
+        tv_dotSize.setText("SIZE : " + v_drawingPad.getDotSize());
 
     }
 
@@ -66,19 +76,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 v_drawingPad.setPenColor(Color.GREEN);
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
+            case R.id.cyan_b:
+                v_drawingPad.setPenColor(Color.CYAN);
+                Log.d("Button Pressed: ", _b.getText() + "");
+                break;
+            case R.id.black_b:
+                v_drawingPad.setPenColor(Color.BLACK);
+                Log.d("Button Pressed: ", _b.getText() + "");
+                break;
+            case R.id.yellow_b:
+                v_drawingPad.setPenColor(Color.YELLOW);
+                Log.d("Button Pressed: ", _b.getText() + "");
+                break;
+            case R.id.white_b:
+                v_drawingPad.setPenColor(Color.WHITE);
+                Log.d("Button Pressed: ", _b.getText() + "");
+                break;
+            case R.id.magenta_b:
+                v_drawingPad.setPenColor(Color.MAGENTA);
+                Log.d("Button Pressed: ", _b.getText() + "");
+                break;
             case R.id.reset_b:
                 v_drawingPad.reset();
-                tv_dotSize.setText("DOT SIZE =" + v_drawingPad.getDotSize());
+                tv_dotSize.setText("SIZE: " + v_drawingPad.getDotSize());
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
             case R.id.plus_b:
                 v_drawingPad.changeDotSize(+DOT_SIZE_INCREMENT);
-                tv_dotSize.setText("DOT SIZE = " + v_drawingPad.getDotSize());
+                tv_dotSize.setText("SIZE: " + v_drawingPad.getDotSize());
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
             case R.id.minus_b:
                 v_drawingPad.changeDotSize(-DOT_SIZE_INCREMENT);
-                tv_dotSize.setText("DOT SIZE = " + v_drawingPad.getDotSize());
+                tv_dotSize.setText("SIZE: " + v_drawingPad.getDotSize());
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
         }

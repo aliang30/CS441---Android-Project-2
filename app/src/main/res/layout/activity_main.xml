@@ -38,24 +38,24 @@
         android:text="GREEN" />
 
     <Button
-    android:id="@+id/orange_b"
+    android:id="@+id/magenta_b"
     android:layout_width="72dp"
     android:layout_height="33dp"
     android:layout_marginLeft="170dp"
     android:layout_marginTop="60dp"
-    android:background="#FC9416"
+    android:background="#FF00FF"
     android:textColor="@android:color/white"
-    android:text="ORANGE" />
+    android:text="MAGENTA" />
 
     <Button
-        android:id="@+id/purple_b"
+        android:id="@+id/cyan_b"
         android:layout_width="65dp"
         android:layout_height="33dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="60dp"
-        android:background="#6611B3"
+        android:background="#00FFFF"
         android:textColor="@android:color/white"
-        android:text="PURPLE" />
+        android:text="CYAN" />
 
     <Button
         android:id="@+id/yellow_b"
@@ -68,14 +68,14 @@
         android:text="YELLOW" />
 
     <Button
-        android:id="@+id/pink_b"
+        android:id="@+id/white_b"
         android:layout_width="65dp"
         android:layout_height="33dp"
         android:layout_marginLeft="250dp"
         android:layout_marginTop="22dp"
-        android:background="#EB62D8"
-        android:textColor="@android:color/white"
-        android:text="PINK" />
+        android:background="#FFFFFF"
+        android:textColor="@android:color/black"
+        android:text="WHITE" />
 
     <Button
         android:id="@+id/black_b"
@@ -125,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="440dp"
-        android:text="Dot Size = "
+        android:text="SIZE : "
         android:textColor="#000000"
         app:fontFamily="sans-serif-condensed-medium" />
 
