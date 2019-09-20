@@ -633,6 +633,7 @@ drawable button_background
 drawable button_black
 drawable button_blue
 drawable button_cyan
+drawable button_erase
 drawable button_green
 drawable button_magenta
 drawable button_white
@@ -691,6 +692,7 @@ id blocking
 id blue_b
 id bottom
 id buttonPanel
+id cartoon_b
 id center
 id center_horizontal
 id center_vertical
@@ -710,7 +712,6 @@ id default_activity_button
 id dimensions
 id direct
 id disableHome
-id dotSize_tv
 id drawingPad_v
 id edit_query
 id end

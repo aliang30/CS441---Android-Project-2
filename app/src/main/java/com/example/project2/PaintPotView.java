@@ -1,17 +1,18 @@
 package com.example.project2;
 
+import android.util.AttributeSet;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import java.util.ArrayList;
 
 public class PaintPotView extends View implements View.OnTouchListener{
+
     private final int DEFAULT_DOT_SIZE = 5;
     private final int MAX_DOT_SIZE = 100;
     private final int MIN_DOT_SIZE = 0;
@@ -21,10 +22,8 @@ public class PaintPotView extends View implements View.OnTouchListener{
     private Paint mPaint;
     private final int DEFAULT_COLOR = Color.GREEN;
     private float mX, mY, mOldX, mOldY;
-
     private ArrayList<Path> mPaths;
     private ArrayList<Paint> mPaints;
-
 
     public PaintPotView(Context context) {
         super(context);
@@ -41,18 +40,10 @@ public class PaintPotView extends View implements View.OnTouchListener{
         this.init();
     }
 
-    public int getDotSize() {
-        return mDotSize;
-    }
-
     public void changeDotSize(int increment) {
         this.mDotSize += increment;
         this.mDotSize = Math.max(mDotSize, MIN_DOT_SIZE); //ceiling
         this.mDotSize = Math.min(mDotSize, MAX_DOT_SIZE); //floor
-    }
-
-    public int getPenColor() {
-        return mPenColor;
     }
 
     public void setPenColor(int penColor) {
@@ -82,7 +73,6 @@ public class PaintPotView extends View implements View.OnTouchListener{
         super.onDraw(canvas);
         for (int i = 0 ; i < mPaths.size() ; i++)
             canvas.drawPath(mPaths.get(i), mPaints.get(i));
-
     }
 
     @Override
@@ -105,7 +95,7 @@ public class PaintPotView extends View implements View.OnTouchListener{
             case MotionEvent.ACTION_UP:
                 this.addPath(true);
                 if (mOldX == mX && mOldY == mY)
-                    this.mPath.addCircle(mX, mY, mDotSize/2, Path.Direction.CW);
+                    this.mPath.addCircle(mX, mY, mDotSize / 2, Path.Direction.CW);
                 break;
         }
         this.invalidate();

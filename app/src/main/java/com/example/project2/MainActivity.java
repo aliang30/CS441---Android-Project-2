@@ -12,12 +12,10 @@ import android.widget.TextView;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     PaintPotView v_drawingPad;
     Button b_red, b_blue, b_green, b_cyan, b_yellow, b_black, b_white, b_magenta;
     Button b_reset, b_dotSizePlus, b_dotSizeMinus;
-    TextView tv_dotSize;
 
     private static final int DOT_SIZE_INCREMENT = 5;
 
@@ -25,7 +23,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         b_red = (Button)findViewById(R.id.red_b);
         b_blue = (Button)findViewById(R.id.blue_b);
@@ -51,9 +48,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b_dotSizePlus.setOnClickListener(this);
         b_dotSizeMinus.setOnClickListener(this);
         v_drawingPad = (PaintPotView)findViewById(R.id.drawingPad_v);
-
-        tv_dotSize = (TextView)findViewById(R.id.dotSize_tv);
-        tv_dotSize.setText("SIZE : " + v_drawingPad.getDotSize());
 
     }
 
@@ -98,17 +92,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.reset_b:
                 v_drawingPad.reset();
-                tv_dotSize.setText("SIZE: " + v_drawingPad.getDotSize());
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
             case R.id.plus_b:
                 v_drawingPad.changeDotSize(+DOT_SIZE_INCREMENT);
-                tv_dotSize.setText("SIZE: " + v_drawingPad.getDotSize());
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
             case R.id.minus_b:
                 v_drawingPad.changeDotSize(-DOT_SIZE_INCREMENT);
-                tv_dotSize.setText("SIZE: " + v_drawingPad.getDotSize());
                 Log.d("Button Pressed: ", _b.getText() + "");
                 break;
         }
