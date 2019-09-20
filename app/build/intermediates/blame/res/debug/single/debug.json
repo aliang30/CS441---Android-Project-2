@@ -224,6 +224,10 @@
         "source": "C:\\Users\\Alan\\.gradle\\caches\\transforms-2\\files-2.1\\f6a183f8595ca34f3d5cc99d1f8bc322\\appcompat-1.0.2\\res\\drawable-ldrtl-mdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_magenta.xml.flat",
+        "source": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\button_magenta.xml"
+    },
+    {
         "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_light.xml.flat",
         "source": "C:\\Users\\Alan\\.gradle\\caches\\transforms-2\\files-2.1\\f6a183f8595ca34f3d5cc99d1f8bc322\\appcompat-1.0.2\\res\\color\\abc_primary_text_material_light.xml"
     },
@@ -672,6 +676,10 @@
         "source": "C:\\Users\\Alan\\.gradle\\caches\\transforms-2\\files-2.1\\f6a183f8595ca34f3d5cc99d1f8bc322\\appcompat-1.0.2\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
+        "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_green.xml.flat",
+        "source": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\button_green.xml"
+    },
+    {
         "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_view.xml.flat",
         "source": "C:\\Users\\Alan\\.gradle\\caches\\transforms-2\\files-2.1\\f6a183f8595ca34f3d5cc99d1f8bc322\\appcompat-1.0.2\\res\\layout\\abc_search_view.xml"
     },
@@ -1092,6 +1100,10 @@
         "source": "C:\\Users\\Alan\\.gradle\\caches\\transforms-2\\files-2.1\\f6a183f8595ca34f3d5cc99d1f8bc322\\appcompat-1.0.2\\res\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
+        "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_yellow.xml.flat",
+        "source": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\button_yellow.xml"
+    },
+    {
         "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_dialog_material_background.xml.flat",
         "source": "C:\\Users\\Alan\\.gradle\\caches\\transforms-2\\files-2.1\\f6a183f8595ca34f3d5cc99d1f8bc322\\appcompat-1.0.2\\res\\drawable\\abc_dialog_material_background.xml"
     },
@@ -1266,6 +1278,10 @@
     {
         "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Alan\\.gradle\\caches\\transforms-2\\files-2.1\\f6a183f8595ca34f3d5cc99d1f8bc322\\appcompat-1.0.2\\res\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_black.xml.flat",
+        "source": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\button_black.xml"
     },
     {
         "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_vector_test.xml.flat",
@@ -1488,6 +1504,10 @@
         "source": "C:\\Users\\Alan\\.gradle\\caches\\transforms-2\\files-2.1\\f6a183f8595ca34f3d5cc99d1f8bc322\\appcompat-1.0.2\\res\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_blue.xml.flat",
+        "source": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\button_blue.xml"
+    },
+    {
         "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\Alan\\.gradle\\caches\\transforms-2\\files-2.1\\f6a183f8595ca34f3d5cc99d1f8bc322\\appcompat-1.0.2\\res\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
@@ -1568,12 +1588,20 @@
         "source": "C:\\Users\\Alan\\.gradle\\caches\\transforms-2\\files-2.1\\f6a183f8595ca34f3d5cc99d1f8bc322\\appcompat-1.0.2\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
+        "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_white.xml.flat",
+        "source": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\button_white.xml"
+    },
+    {
         "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Alan\\.gradle\\caches\\transforms-2\\files-2.1\\f6a183f8595ca34f3d5cc99d1f8bc322\\appcompat-1.0.2\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Alan\\.gradle\\caches\\transforms-2\\files-2.1\\f6a183f8595ca34f3d5cc99d1f8bc322\\appcompat-1.0.2\\res\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_cyan.xml.flat",
+        "source": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\button_cyan.xml"
     },
     {
         "merged": "C:\\Users\\Alan\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",

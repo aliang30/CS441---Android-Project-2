@@ -630,6 +630,13 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable background
 drawable button_background
+drawable button_black
+drawable button_blue
+drawable button_cyan
+drawable button_green
+drawable button_magenta
+drawable button_white
+drawable button_yellow
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable notification_action_background
