@@ -692,7 +692,6 @@ id blocking
 id blue_b
 id bottom
 id buttonPanel
-id cartoon_b
 id center
 id center_horizontal
 id center_vertical
@@ -810,6 +809,7 @@ id topPanel
 id uniform
 id up
 id useLogo
+id view_root
 id white_b
 id withText
 id wrap

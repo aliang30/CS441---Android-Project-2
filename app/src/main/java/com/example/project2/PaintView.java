@@ -1,74 +1,124 @@
 package com.example.project2;
 
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup.LayoutParams;
+import android.util.AttributeSet;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.util.AttributeSet;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
-import android.graphics.Bitmap;
+import java.util.ArrayList;
 
-public class PaintView extends View {
 
-    public int width;
-    public int height;
-    private Bitmap mBitmap;
-    private Paint mPaint;
-    private Canvas mCanvas;
+public class PaintView extends View implements View.OnTouchListener{
+
+    private int DEFAULT_COLOR = Color.BLACK;
+    private final int DEFAULT_DOT_SIZE = 5;
+    private final int MAX_DOT_SIZE = 100;
+    private final int MIN_DOT_SIZE = 0;
+    private int mDotSize;
+    private int mPenColor;
     private Path mPath;
-    private float mX, mY;
-    private static final float TOLERANCE = 5;
-    public Context context;
+    private Paint mPaint;
 
+    private float X, Y, OldX, OldY;
+    private ArrayList<Path> mPaths;
+    private ArrayList<Paint> mPaints;
 
-    public LayoutParams params;
-    private Path path = new Path();
-    private Paint brush = new Paint();
-
+    //Constructor
     public PaintView(Context context) {
         super(context);
-        brush.setAntiAlias(true);
-        brush.setColor(Color.BLACK);
-        brush.setStyle(Paint.Style.STROKE);
-        brush.setStrokeJoin(Paint.Join.ROUND);
-        brush.setStrokeWidth(8f);
-
-        params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        this.init();
     }
 
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        float pointX = event.getX();
-        float pointY = event.getY();
+    public PaintView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        this.init();
+    }
 
-        switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN:
-                path.moveTo(pointX, pointY);
-                return true;
-            case MotionEvent.ACTION_MOVE:
-                path.lineTo(pointX, pointY);
-                break;
-            default:
-                return false;
-        }
-        postInvalidate();
-        return false;
+    public PaintView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        this.init();
+    }
+
+    public void changeDotSize(int increment) {
+        this.mDotSize += increment;
+        this.mDotSize = Math.max(mDotSize, MIN_DOT_SIZE); //ceiling
+        this.mDotSize = Math.min(mDotSize, MAX_DOT_SIZE); //floor
+    }
+
+    public void setPenColor(int penColor) {
+        this.mPenColor = penColor;
+        this.mPaint.setColor(mPenColor);
+    }
+
+    private void init() {
+        this.mDotSize = DEFAULT_DOT_SIZE;
+        this.mPenColor = DEFAULT_COLOR;
+        this.mPath = new Path();
+        this.mPaths = new ArrayList<>();
+        this.mPaints = new ArrayList<>();
+        this.addPath(false);
+        this.X = this.Y = this.OldX = this.OldY = (float) 0.0;
+        this.setOnTouchListener(this);
+        this.X = this.Y = (float) 0.0;
+    }
+
+    //erase everything on the canvas
+    public void reset() {
+        this.init();
+        this.invalidate();
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        canvas.drawPath(path, brush);
+        super.onDraw(canvas);
+        for (int i = 0 ; i < mPaths.size() ; i++)
+            canvas.drawPath(mPaths.get(i), mPaints.get(i));
     }
 
-    //eraser
-    public void clearCanvas() {
+    @Override
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+        X = motionEvent.getX();
+        Y = motionEvent.getY();
 
+        Log.d("Touched:", " (" + X + "," + Y + ")");
+
+        switch (motionEvent.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                this.addPath(false);
+                this.mPath.addCircle(X, Y, mDotSize / 2, Path.Direction.CW);
+                this.addPath(false);
+                this.mPath.moveTo(X, Y);
+                break;
+            case MotionEvent.ACTION_MOVE:
+                this.mPath.lineTo(X, Y);
+                break;
+            case MotionEvent.ACTION_UP:
+                this.addPath(true);
+                if (OldX == X && OldY == Y) {
+                    this.mPath.addCircle(X, Y, mDotSize / 2, Path.Direction.CW);
+                }
+                break;
+        }
+        this.invalidate();
+        OldX = X;
+        OldY = Y;
+
+        return true;
     }
 
-
-
+    private void addPath(boolean fill){
+        mPath = new Path();
+        mPaths.add(mPath);
+        mPaint = new Paint();
+        mPaints.add(mPaint);
+        mPaint.setColor(mPenColor);
+        if (!fill) {
+            mPaint.setStyle(Paint.Style.STROKE);
+        }
+        mPaint.setStrokeWidth(mDotSize);
+    }
 }

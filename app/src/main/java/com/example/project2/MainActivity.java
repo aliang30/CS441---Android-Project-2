@@ -1,19 +1,15 @@
 package com.example.project2;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.view.Menu;
-import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    PaintPotView v_drawingPad;
+
+    PaintView v_drawingPad;
     Button b_red, b_blue, b_green, b_cyan, b_yellow, b_black, b_white, b_magenta;
     Button b_reset, b_dotSizePlus, b_dotSizeMinus;
 
@@ -24,17 +20,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        b_red = (Button)findViewById(R.id.red_b);
-        b_blue = (Button)findViewById(R.id.blue_b);
-        b_green = (Button)findViewById(R.id.green_b);
-        b_yellow = (Button)findViewById(R.id.yellow_b);
-        b_magenta = (Button)findViewById(R.id.magenta_b);
-        b_black = (Button)findViewById(R.id.black_b);
-        b_white = (Button)findViewById(R.id.white_b);
-        b_cyan = (Button)findViewById(R.id.cyan_b);
-        b_reset = (Button)findViewById(R.id.reset_b);
-        b_dotSizePlus = (Button)findViewById(R.id.plus_b);
-        b_dotSizeMinus = (Button)findViewById(R.id.minus_b);
+        b_red = findViewById(R.id.red_b);
+        b_blue = findViewById(R.id.blue_b);
+        b_green = findViewById(R.id.green_b);
+        b_yellow = findViewById(R.id.yellow_b);
+        b_magenta = findViewById(R.id.magenta_b);
+        b_black = findViewById(R.id.black_b);
+        b_white = findViewById(R.id.white_b);
+        b_cyan = findViewById(R.id.cyan_b);
+        b_reset = findViewById(R.id.reset_b);
+        b_dotSizePlus = findViewById(R.id.plus_b);
+        b_dotSizeMinus = findViewById(R.id.minus_b);
 
         b_red.setOnClickListener(this);
         b_blue.setOnClickListener(this);
@@ -47,15 +43,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b_reset.setOnClickListener(this);
         b_dotSizePlus.setOnClickListener(this);
         b_dotSizeMinus.setOnClickListener(this);
-        v_drawingPad = (PaintPotView)findViewById(R.id.drawingPad_v);
-
+        v_drawingPad = findViewById(R.id.drawingPad_v);
     }
-
 
     @Override
     public void onClick(View view) {
 
-        Button _b = (Button)findViewById(view.getId());
+        Button _b = findViewById(view.getId());
 
         switch (view.getId()) {
             case R.id.red_b:
@@ -104,4 +98,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
 }
