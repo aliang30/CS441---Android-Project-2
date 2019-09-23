@@ -14,9 +14,9 @@ Resources:
 - https://stackoverflow.com/questions/2655402/android-canvas-drawtext
 - https://stackoverflow.com/questions/41775821/what-is-the-difference-between-paint-and-textpaint-in-android
 - https://stackoverflow.com/questions/16650419/draw-in-canvas-by-finger-android
+- https://developer.android.com/reference/android/graphics/Color
+- https://developer.android.com/reference/android/graphics/Path
 - CSP AS Paint Pot Part 3 - Building the View Class - https://www.youtube.com/watch?v=CQWcrh1hhCM
 - CSP AS Paint Pot Part 4 - Using Android's Path to Fingerpaint - https://www.youtube.com/watch?v=-vG5PJsE1aY
 - CSP AS Paint Pot Part 5 - Adding the Dots - https://www.youtube.com/watch?v=nv-NDw0gXWA
-- https://developer.android.com/reference/android/graphics/Color
-- https://developer.android.com/reference/android/graphics/Path
 
